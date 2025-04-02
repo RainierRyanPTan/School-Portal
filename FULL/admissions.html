@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Admissions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library resources.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payment.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Admissions</h1>
+            
+            <div class="admissions-welcome">
+                <p>Thank you for your interest in our school! Below you'll find all the information you need about our admissions process.</p>
+            </div>
+            
+            <div class="admissions-process">
+                <h2>Admissions Process</h2>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Inquiry</h3>
+                        <p>Submit an inquiry form or attend an open house.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Application</h3>
+                        <p>Complete the online application form.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Testing</h3>
+                        <p>Schedule and complete entrance testing.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Interview</h3>
+                        <p>Participate in a family interview.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>Decision</h3>
+                        <p>Receive admissions decision.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admissions-options">
+                <div class="admissions-card">
+                    <h2><i class="fas fa-child"></i> Kindergarten Admissions</h2>
+                    <p>Information for families applying to our kindergarten program.</p>
+                    <button class="btn" onclick="viewKindergarten()">Learn More</button>
+                </div>
+                
+                <div class="admissions-card">
+                    <h2><i class="fas fa-user-graduate"></i> High School Admissions</h2>
+                    <p>Process for students entering grades 9-12.</p>
+                    <button class="btn" onclick="viewHighSchool()">Learn More</button>
+                </div>
+                
+                <div class="admissions-card">
+                    <h2><i class="fas fa-globe-americas"></i> International Admissions</h2>
+                    <p>Information for international student applicants.</p>
+                    <button class="btn" onclick="viewInternational()">Learn More</button>
+                </div>
+                
+                <div class="admissions-card">
+                    <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                    <p>Answers to common admissions questions.</p>
+                    <button class="btn" onclick="viewFAQ()">View FAQ</button>
+                </div>
+            </div>
+            
+            <div class="important-dates">
+                <h2>Important Dates</h2>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                    </tr>
+                    <tr>
+                        <td>February 15, 2025</td>
+                        <td>Application Deadline for Priority Consideration</td>
+                    </tr>
+                    <tr>
+                        <td>March 10, 2025</td>
+                        <td>Financial Aid Application Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>March 20, 2025</td>
+                        <td>Admissions Decisions Released</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="apply-now">
+                <h2>Ready to Apply?</h2>
+                <button class="btn large-btn" onclick="startApplication()">Begin Application</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewKindergarten() {
+            alert("Loading kindergarten admissions information...");
+        }
+        
+        function viewHighSchool() {
+            alert("Loading high school admissions information...");
+        }
+        
+        function viewInternational() {
+            alert("Loading international admissions information...");
+        }
+        
+        function viewFAQ() {
+            alert("Loading frequently asked questions...");
+        }
+        
+        function startApplication() {
+            alert("Redirecting to application portal...");
+        }
+    </script>
+</body>
+</html>

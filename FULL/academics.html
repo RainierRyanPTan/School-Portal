@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Academics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Academics</h1>
+            
+            <div class="academic-departments">
+                <h2>Academic Departments</h2>
+                <div class="dept-grid">
+                    <div class="dept-card">
+                        <h3>Mathematics</h3>
+                        <p>Courses in algebra, geometry, calculus, and more.</p>
+                        <button class="btn" onclick="viewDept('math')">View Courses</button>
+                    </div>
+                    <div class="dept-card">
+                        <h3>Science</h3>
+                        <p>Biology, chemistry, physics, and environmental science.</p>
+                        <button class="btn" onclick="viewDept('science')">View Courses</button>
+                    </div>
+                    <div class="dept-card">
+                        <h3>English</h3>
+                        <p>Literature, composition, and creative writing.</p>
+                        <button class="btn" onclick="viewDept('english')">View Courses</button>
+                    </div>
+                    <div class="dept-card">
+                        <h3>Social Studies</h3>
+                        <p>History, government, economics, and psychology.</p>
+                        <button class="btn" onclick="viewDept('social-studies')">View Courses</button>
+                    </div>
+                    <div class="dept-card">
+                        <h3>World Languages</h3>
+                        <p>Spanish, French, Mandarin, and more.</p>
+                        <button class="btn" onclick="viewDept('languages')">View Courses</button>
+                    </div>
+                    <div class="dept-card">
+                        <h3>Arts</h3>
+                        <p>Visual arts, music, theater, and dance.</p>
+                        <button class="btn" onclick="viewDept('arts')">View Courses</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="academic-programs">
+                <h2>Special Programs</h2>
+                <div class="program-card">
+                    <h3>Advanced Placement (AP)</h3>
+                    <p>College-level courses for high school students.</p>
+                    <button class="btn" onclick="viewProgram('ap')">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <h3>Honors Program</h3>
+                    <p>Rigorous courses for academically gifted students.</p>
+                    <button class="btn" onclick="viewProgram('honors')">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <h3>STEM Academy</h3>
+                    <p>Specialized science, technology, engineering, and math program.</p>
+                    <button class="btn" onclick="viewProgram('stem')">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="academic-resources">
+                <h2>Academic Resources</h2>
+                <ul>
+                    <li><a href="#" onclick="viewResource('tutoring')">Tutoring Center</a></li>
+                    <li><a href="#" onclick="viewResource('writing')">Writing Center</a></li>
+                    <li><a href="#" onclick="viewResource('research')">Research Help</a></li>
+                    <li><a href="#" onclick="viewResource('college')">College Preparation</a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewDept(dept) {
+            alert(`Loading ${dept} department courses...`);
+        }
+        
+        function viewProgram(program) {
+            alert(`Loading ${program} program information...`);
+        }
+        
+        function viewResource(resource) {
+            alert(`Loading ${resource} resources...`);
+        }
+    </script>
+</body>
+</html>

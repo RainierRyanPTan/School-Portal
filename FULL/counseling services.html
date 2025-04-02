@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Counseling Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html" class="active"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Counseling Services</h1>
+            
+            <div class="counseling-options">
+                <div class="counseling-card">
+                    <h2>Academic Counseling</h2>
+                    <p>Schedule appointments for academic guidance.</p>
+                    <button class="btn" onclick="scheduleAcademicCounseling()">Schedule Appointment</button>
+                </div>
+                
+                <div class="counseling-card">
+                    <h2>Career Counseling</h2>
+                    <p>Get guidance for your future career path.</p>
+                    <button class="btn" onclick="scheduleCareerCounseling()">Schedule Appointment</button>
+                </div>
+                
+                <div class="counseling-card">
+                    <h2>Personal Counseling</h2>
+                    <p>Confidential support for personal matters.</p>
+                    <button class="btn" onclick="schedulePersonalCounseling()">Schedule Appointment</button>
+                </div>
+                
+                <div class="counseling-card">
+                    <h2>Emergency Contacts</h2>
+                    <p>Immediate help resources.</p>
+                    <button class="btn" onclick="viewEmergencyContacts()">View Contacts</button>
+                </div>
+            </div>
+            
+            <div class="counselors-list">
+                <h2>Our Counselors</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Specialization</th>
+                        <th>Availability</th>
+                    </tr>
+                    <tr>
+                        <td>Dr. Ramonita C. Binokbok</td>
+                        <td>Academic & Career</td>
+                        <td>Mon-Fri, 10am-5pm</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Pinigong Nga P. So</td>
+                        <td>Personal Counseling</td>
+                        <td>Sat-Sun, 8am-3pm</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function scheduleAcademicCounseling() {
+            alert("Redirecting to academic counseling scheduling...");
+        }
+        
+        function scheduleCareerCounseling() {
+            alert("Redirecting to career counseling scheduling...");
+        }
+        
+        function schedulePersonalCounseling() {
+            alert("Redirecting to personal counseling scheduling...");
+        }
+        
+        function viewEmergencyContacts() {
+            alert("Displaying emergency contact information...");
+        }
+    </script>
+</body>
+</html>

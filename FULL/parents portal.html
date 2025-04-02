@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Parent's Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parentsportal.html" class="active"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Parent's Portal</h1>
+            
+            <div class="parent-options">
+                <div class="parent-card">
+                    <h2>Child's Progress</h2>
+                    <select id="studentSelect">
+                        <option value="">Select Student</option>
+                        <option value="1">Rainier Ryan P. Tan</option>
+                        <option value="2">Antonette Jean Dajay</option>
+                        <option value="3">Ivan Emolaga</option>
+                    </select>
+                    <button class="btn" onclick="viewChildProgress()">View Progress</button>
+                </div>               
+                <div class="parent-card">
+                    <h2>School Announcements</h2>
+                    <p>Important notices for parents.</p>
+                    <button class="btn" onclick="viewAnnouncements()">View Announcements</button>
+                </div>
+                <div class="parent-card">
+                    <h2>Teacher Communication</h2>
+                    <p>Contact your child's teachers.</p>
+                    <button class="btn" onclick="contactTeachers()">Contact Teachers</button>
+                </div>             
+                <div class="parent-card">
+                    <h2>School Calendar</h2>
+                    <p>View important dates and events.</p>
+                    <button class="btn" onclick="viewCalendar()">View Calendar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewChildProgress() {
+            const studentId = document.getElementById('studentSelect').value;
+            if (studentId) {
+                alert(`Loading progress for student ID: ${studentId}`);
+            } else {
+                alert("Please select a student first.");
+            }
+        }
+        
+        function viewAnnouncements() {
+            alert("Loading school announcements...");
+        }
+        
+        function contactTeachers() {
+            alert("Opening teacher communication portal...");
+        }
+        
+        function viewCalendar() {
+            window.location.href = "calendar.html";
+        }
+    </script>
+</body>
+</html>

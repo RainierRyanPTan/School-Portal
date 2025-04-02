@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Latest News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Latest News</h1>
+            
+            <div class="news-categories">
+                <button class="btn category-btn active" onclick="filterNews('all')">All News</button>
+                <button class="btn category-btn" onclick="filterNews('announcements')">Announcements</button>
+                <button class="btn category-btn" onclick="filterNews('events')">Events</button>
+                <button class="btn category-btn" onclick="filterNews('achievements')">Achievements</button>
+                <button class="btn category-btn" onclick="filterNews('sports')">Sports</button>
+            </div>
+            
+            <div class="news-list">
+                <div class="news-item" data-category="announcements">
+                    <img src="news1.jpg" alt="News Image">
+                    <div class="news-content">
+                        <h2>Rodrigo Duterte at The Hague</h2>
+                        <p class="news-meta">Posted on March 14, 2025 | Announcements</p>
+                        <p>Former President Rodrigo Duterte, who was arrested on Tuesday under a warrant issued by the ICC...</p>
+                        <button class="btn" onclick="readMore('arrest')">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="news-item" data-category="achievements">
+                    <img src="news2.jpg" alt="News Image">
+                    <div class="news-content">
+                        <h2>AFP ready to assist, support civilian missions to West PH Sea</h2>
+                        <p class="news-meta">Posted on March 18, 2025 | Country</p>
+                        <p>The Armed Forces of the Philippines is ready to extend assistance and support to...</p>
+                        <button class="btn" onclick="readMore('country')">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="news-item" data-category="sports">
+                    <img src="news3.jpg" alt="News Image">
+                    <div class="news-content">
+                        <h2>Football Team Advances to Playoffs</h2>
+                        <p class="news-meta">Posted on February 12, 2025 | Sports</p>
+                        <p>With their victory last Friday, our football team has secured a spot in the regional playoffs...</p>
+                        <button class="btn" onclick="readMore('football')">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="news-item" data-category="events">
+                    <img src="news4.jpg" alt="News Image">
+                    <div class="news-content">
+                        <h2>Homecoming Week Schedule</h2>
+                        <p class="news-meta">Posted on February 5, 2025 | Events</p>
+                        <p>Check out the exciting activities planned for Homecoming Week, culminating with the big game and dance...</p>
+                        <button class="btn" onclick="readMore('homecoming')">Read More</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-archive">
+                <button class="btn" onclick="viewArchive()">View News Archive</button>
+            </div>
+            
+            <div class="news-subscription">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive news updates directly to your email.</p>
+                <input type="email" id="newsEmail" placeholder="Enter your email address">
+                <button class="btn" onclick="subscribeNews()">Subscribe</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterNews(category) {
+            alert(`Filtering news by category: ${category}`);
+        }
+        function readMore(article) {
+            alert(`Loading full article: ${article}`);
+        }       
+        function viewArchive() {
+            alert("Loading news archive...");
+        }      
+        function subscribeNews() {
+            const email = document.getElementById('newsEmail').value;
+            if (email) {
+                alert(`Thank you for subscribing with ${email}!`);
+            } else {
+                alert("Please enter your email address.");
+            }
+        }
+    </script>
+</body>
+</html>

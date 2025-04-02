@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Alumni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html" class="active"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Alumni Portal</h1>
+            
+            <div class="alumni-welcome">
+                <p>Welcome back to your alma mater! Stay connected with your school community.</p>
+            </div>
+            
+            <div class="alumni-options">
+                <div class="alumni-card">
+                    <h2>Alumni Directory</h2>
+                    <p>Connect with fellow alumni.</p>
+                    <button class="btn" onclick="viewDirectory()">View Directory</button>
+                </div>
+                
+                <div class="alumni-card">
+                    <h2>Events & Reunions</h2>
+                    <p>Upcoming alumni events.</p>
+                    <button class="btn" onclick="viewEvents()">View Events</button>
+                </div>
+                
+                <div class="alumni-card">
+                    <h2>Give Back</h2>
+                    <p>Support current students.</p>
+                    <button class="btn" onclick="giveBack()">Learn More</button>
+                </div>
+                
+                <div class="alumni-card">
+                    <h2>Update Your Info</h2>
+                    <p>Keep your contact details current.</p>
+                    <button class="btn" onclick="updateInfo()">Update Info</button>
+                </div>
+            </div>
+            
+            <div class="alumni-news">
+                <h2>Alumni News</h2>
+                <div class="news-item">
+                    <h3>Class of 1990 Reunion</h3>
+                    <p>Join us for the 35-year reunion of the Class of 2010 on November 15th.</p>
+                </div>
+                <div class="news-item">
+                    <h3>Alumni Achievement Award</h3>
+                    <p>Dr. Willie R. Ong (Class of 1999) receives prestigious award in medicine.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewDirectory() {
+            alert("Loading alumni directory...");
+        }
+        
+        function viewEvents() {
+            alert("Loading alumni events...");
+        }
+        
+        function giveBack() {
+            alert("Redirecting to giving opportunities...");
+        }
+        
+        function updateInfo() {
+            alert("Opening alumni information update form...");
+        }
+    </script>
+</body>
+</html>

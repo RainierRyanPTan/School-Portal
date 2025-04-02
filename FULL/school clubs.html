@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP School Clubs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>School Clubs</h1>
+            
+            <div class="club-search">
+                <input type="text" id="clubSearch" placeholder="Search for clubs...">
+                <button class="btn" onclick="searchClubs()"><i class="fas fa-search"></i> Search</button>
+            </div>
+            
+            <div class="club-categories">
+                <button class="btn category-btn active" onclick="filterClubs('all')">All Clubs</button>
+                <button class="btn category-btn" onclick="filterClubs('academic')">Academic</button>
+                <button class="btn category-btn" onclick="filterClubs('arts')">Arts</button>
+                <button class="btn category-btn" onclick="filterClubs('service')">Service</button>
+                <button class="btn category-btn" onclick="filterClubs('sports')">Sports</button>
+            </div>
+            
+            <div class="club-list">
+                <div class="club-card" data-category="academic">
+                    <img src="sc1.jpg" alt="Club Photo">
+                    <h2>Science Club</h2>
+                    <p><i class="fas fa-users"></i> Advisor: Mr. Marcos</p>
+                    <p><i class="fas fa-calendar-alt"></i> Meets: Tuesdays, 3:30 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Room: Science 205</p>
+                    <button class="btn" onclick="viewClub('science')">Learn More</button>
+                </div>
+                
+                <div class="club-card" data-category="arts">
+                    <img src="sc2.jpg" alt="Club Photo">
+                    <h2>Drama Club</h2>
+                    <p><i class="fas fa-users"></i> Advisor: Ms. Domingo</p>
+                    <p><i class="fas fa-calendar-alt"></i> Meets: Mondays & Thursdays, 3:45 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Room: Auditorium</p>
+                    <button class="btn" onclick="viewClub('drama')">Learn More</button>
+                </div>
+                
+                <div class="club-card" data-category="service">
+                    <img src="sc3.jpg" alt="Club Photo">
+                    <h2>Community Service Club</h2>
+                    <p><i class="fas fa-users"></i> Advisor: Mrs. Castro</p>
+                    <p><i class="fas fa-calendar-alt"></i> Meets: Wednesdays, 3:30 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Room: 112</p>
+                    <button class="btn" onclick="viewClub('service')">Learn More</button>
+                </div>
+                
+                <div class="club-card" data-category="academic">
+                    <img src="sc4.jpg" alt="Club Photo">
+                    <h2>Debate Team</h2>
+                    <p><i class="fas fa-users"></i> Advisor: Mr. Gadon</p>
+                    <p><i class="fas fa-calendar-alt"></i> Meets: Fridays, 3:30 PM</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Room: Library</p>
+                    <button class="btn" onclick="viewClub('debate')">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="start-club">
+                <h2>Don't See Your Interest?</h2>
+                <p>Students can start new clubs with faculty approval.</p>
+                <button class="btn" onclick="startNewClub()">Start a New Club</button>
+            </div>
+            
+            <div class="club-events">
+                <h2>Upcoming Club Events</h2>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Club</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>May 18</td>
+                        <td>Science Fair Prep Workshop</td>
+                        <td>Science Club</td>
+                        <td>Science 205</td>
+                    </tr>
+                    <tr>
+                        <td>May 25</td>
+                        <td>Fall Play Auditions</td>
+                        <td>Drama Club</td>
+                        <td>Auditorium</td>
+                    </tr>
+                    <tr>
+                        <td>June 2</td>
+                        <td>Debate Tournament</td>
+                        <td>Debate Team</td>
+                        <td>Central High</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function searchClubs() {
+            const query = document.getElementById('clubSearch').value;
+            if (query) {
+                alert(`Searching clubs for: ${query}`);
+            } else {
+                alert("Please enter a search term.");
+            }
+        }
+        
+        function filterClubs(category) {
+            alert(`Filtering clubs by category: ${category}`);
+        }
+        
+        function viewClub(clubId) {
+            alert(`Loading details for club: ${clubId}`);
+        }
+        
+        function startNewClub() {
+            alert("Redirecting to new club application...");
+        }
+    </script>
+</body>
+</html>

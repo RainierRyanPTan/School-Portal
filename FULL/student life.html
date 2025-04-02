@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Student Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html" class="active"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Student Life</h1>
+            
+            <div class="student-life-intro">
+                <p>At our school, we believe that education extends beyond the classroom. Explore the various opportunities available to enhance your school experience.</p>
+            </div>
+            
+            <div class="life-sections">
+                <div class="life-section">
+                    <h2><i class="fas fa-users"></i> Clubs & Organizations</h2>
+                    <p>Join one of our 30+ student-run clubs or start your own! From robotics to debate, there's something for everyone.</p>
+                    <button class="btn" onclick="viewClubs()">View All Clubs</button>
+                </div>
+                
+                <div class="life-section">
+                    <h2><i class="fas fa-theater-masks"></i> Arts & Culture</h2>
+                    <p>Participate in our vibrant arts community through theater productions, music ensembles, and art exhibitions.</p>
+                    <button class="btn" onclick="viewArts()">Learn More</button>
+                </div>
+                
+                <div class="life-section">
+                    <h2><i class="fas fa-handshake"></i> Student Government</h2>
+                    <p>Get involved in student leadership and help shape school policies and activities.</p>
+                    <button class="btn" onclick="viewGovernment()">Learn More</button>
+                </div>
+                
+                <div class="life-section">
+                    <h2><i class="fas fa-heart"></i> Wellness Programs</h2>
+                    <p>Resources and programs to support student mental and physical health.</p>
+                    <button class="btn" onclick="viewWellness()">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="student-spotlight">
+                <h2>Student Spotlight</h2>
+                <div class="spotlight-card">
+                    <img src="studlife.jpg" alt="Student Spotlight">
+                    <h3>Maria "Ozawa" Gonzalez</h3>
+                    <p>Senior, President of the Activist Club</p>
+                    <p>"Being involved in student life has helped me grow as a leader and make lifelong friends."</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewClubs() {
+            window.location.href = "school-clubs.html";
+        }
+        
+        function viewArts() {
+            alert("Loading arts and culture information...");
+        }
+        
+        function viewGovernment() {
+            window.location.href = "politics.html";
+        }
+        
+        function viewWellness() {
+            alert("Loading wellness programs information...");
+        }
+    </script>
+</body>
+</html>

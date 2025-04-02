@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Transportation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html" class="active"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Transportation</h1>
+            
+            <div class="transport-options">
+                <div class="transport-card">
+                    <h2><i class="fas fa-bus"></i> School Bus Routes</h2>
+                    <p>View bus schedules and routes for the current school year.</p>
+                    <button class="btn" onclick="viewBusRoutes()">View Bus Routes</button>
+                </div>
+                
+                <div class="transport-card">
+                    <h2><i class="fas fa-car"></i> Parking Information</h2>
+                    <p>Student parking permits and regulations.</p>
+                    <button class="btn" onclick="viewParkingInfo()">View Parking Info</button>
+                </div>
+                
+                <div class="transport-card">
+                    <h2><i class="fas fa-subway"></i> Public Transit</h2>
+                    <p>Information about local public transportation options.</p>
+                    <button class="btn" onclick="viewPublicTransit()">View Transit Info</button>
+                </div>
+                
+                <div class="transport-card">
+                    <h2><i class="fas fa-bicycle"></i> Bike to School</h2>
+                    <p>Resources for students who bike to school.</p>
+                    <button class="btn" onclick="viewBikeInfo()">View Bike Info</button>
+                </div>
+            </div>
+            
+            <div class="bus-schedule">
+                <h2>Sample Bus Schedule</h2>
+                <table>
+                    <tr>
+                        <th>Route</th>
+                        <th>Morning Pickup</th>
+                        <th>Afternoon Dropoff</th>
+                    </tr>
+                    <tr>
+                        <td>Route 1 - San Joaquin</td>
+                        <td>7:00 AM</td>
+                        <td>3:20 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Route 2 - Miag-ao</td>
+                        <td>7:15 AM</td>
+                        <td>3:50 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Route 3 - Guimbal</td>
+                        <td>7:30 AM</td>
+                        <td>4:10 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Route 4 - Tigbauan</td>
+                        <td>7:45 AM</td>
+                        <td>4:15 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Route 5 - Oton</td>
+                        <td>8:15 AM</td>
+                        <td>4:30 PM</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="transport-contact">
+                <h2>Transportation Office</h2>
+                <p><i class="fas fa-phone"></i> Phone: +6391 9873 7433</p>
+                <p><i class="fas fa-envelope"></i> Email: biyahenidrew@school.edu</p>
+                <p><i class="fas fa-clock"></i> Office Hours: 7:00 AM - 6:00 PM, Monday-Friday</p>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewBusRoutes() {
+            alert("Loading bus route information...");
+        }
+        
+        function viewParkingInfo() {
+            alert("Loading parking information...");
+        }
+        
+        function viewPublicTransit() {
+            alert("Loading public transit information...");
+        }
+        
+        function viewBikeInfo() {
+            alert("Loading bike to school information...");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Library Resources</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html" class="active"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Library Resources</h1>
+            
+            <div class="library-search">
+                <h2>Search the Catalog</h2>
+                <input type="text" id="librarySearch" placeholder="Search for books, articles, and more...">
+                <button class="btn" onclick="searchLibrary()"><i class="fas fa-search"></i> Search</button>
+            </div>
+            
+            <div class="library-features">
+                <div class="feature-card">
+                    <h2><i class="fas fa-book-open"></i> E-Books</h2>
+                    <p>Access our collection of digital books.</p>
+                    <button class="btn" onclick="viewEbooks()">Browse E-Books</button>
+                </div>
+                
+                <div class="feature-card">
+                    <h2><i class="fas fa-database"></i> Research Databases</h2>
+                    <p>Academic journals and research materials.</p>
+                    <button class="btn" onclick="viewDatabases()">View Databases</button>
+                </div>
+                
+                <div class="feature-card">
+                    <h2><i class="fas fa-book"></i> Book Checkout</h2>
+                    <p>Check your borrowed items and due dates.</p>
+                    <button class="btn" onclick="viewCheckouts()">View My Checkouts</button>
+                </div>
+                
+                <div class="feature-card">
+                    <h2><i class="fas fa-question-circle"></i> Research Help</h2>
+                    <p>Get assistance with research projects.</p>
+                    <button class="btn" onclick="viewResearchHelp()">Get Help</button>
+                </div>
+            </div>
+            
+            <div class="library-hours">
+                <h2>Library Hours</h2>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                    </tr>
+                    <tr>
+                        <td>Monday-Thursday</td>
+                        <td>6:30 AM - 7:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>8:30 AM - 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>10:00 AM - 12:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>Closed</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="new-arrivals">
+                <h2>New Arrivals</h2>
+                <div class="book-grid">
+                    <div class="book-card">
+                        <img src="book1.jpg" alt="Book Cover">
+                        <h3>The Legend of Death</h3>
+                        <p>By Dr. Janette G. Aring</p>
+                    </div>
+                    <br><br>
+                    <div class="book-card">
+                        <img src="book2.jpg" alt="Book Cover">
+                        <h3>History of Lovers to Enemies</h3>
+                        <p>By Atty. Sara B. Hutan</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function searchLibrary() {
+            const query = document.getElementById('librarySearch').value;
+            if (query) {
+                alert(`Searching library for: ${query}`);
+            } else {
+                alert("Please enter a search term.");
+            }
+        }
+        
+        function viewEbooks() {
+            alert("Loading e-book collection...");
+        }
+        
+        function viewDatabases() {
+            alert("Loading research databases...");
+        }
+        
+        function viewCheckouts() {
+            alert("Loading your checked out items...");
+        }
+        
+        function viewResearchHelp() {
+            alert("Loading research help resources...");
+        }
+    </script>
+</body>
+</html>
