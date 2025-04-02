@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Staff Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html" class="active"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Staff Directory</h1>
+            
+            <div class="search-bar">
+                <input type="text" id="staffSearch" placeholder="Search staff by name or department...">
+                <button class="btn" onclick="searchStaff()"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="filter-options">
+                <select id="departmentFilter">
+                    <option value="">All Departments</option>
+                    <option value="administration">Administration</option>
+                    <option value="math">Mathematics</option>
+                    <option value="science">Science</option>
+                    <option value="english">English</option>
+                    <option value="history">History</option>
+                    <option value="arts">Arts</option>
+                    <option value="physical-education">Physical Education</option>
+                </select>
+                <button class="btn" onclick="filterStaff()">Filter</button>
+            </div>
+            
+            <div class="staff-list">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr>
+                        <td>Atty. Jerjer T. Renas</td>
+                        <td>Principal</td>
+                        <td>Administration</td>
+                        <td>jer2tren@school.edu</td>
+                        <td>+6398 7625 4923</td>
+                    </tr>
+                    <tr>
+                        <td>Ms. Sarah Bhutan</td>
+                        <td>Vice Principal</td>
+                        <td>Administration</td>
+                        <td>msconfidential@school.edu</td>
+                        <td>+6354 1332 4736</td>
+                    </tr>
+                    <tr>
+                        <td>Ms. Alicia Go</td>
+                        <td>Manager</td>
+                        <td>Administration</td>
+                        <td>takasqueenhehe45@school.edu</td>
+                        <td>+6367 5484 6356</td>
+                    </tr>
+                    <tr>
+                        <td>Ms. Fracheska P. Chartorise</td>
+                        <td>Recruiter</td>
+                        <td>Administration</td>
+                        <td>2countskidnahehe75@school.edu</td>
+                        <td>+6367 4646 9760</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function searchStaff() {
+            const query = document.getElementById('staffSearch').value;
+            if (query) {
+                alert(`Searching for staff matching: ${query}`);
+            } else {
+                alert("Please enter a search term.");
+            }
+        }
+        
+        function filterStaff() {
+            const department = document.getElementById('departmentFilter').value;
+            if (department) {
+                alert(`Filtering staff by department: ${department}`);
+            } else {
+                alert("Showing all staff members.");
+            }
+        }
+    </script>
+</body>
+</html>

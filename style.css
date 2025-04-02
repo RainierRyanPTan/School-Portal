@@ -250,7 +250,12 @@ footer {
         padding: 1rem;
     }
     
-    .header-left, .header-right {
+    .header-left {
+        width: 150%;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .header-right {
         width: 100%;
         justify-content: center;
         margin-bottom: 1rem;

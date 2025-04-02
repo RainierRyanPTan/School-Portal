@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISCP School Portal - Dashboard</title>
+    <title>ISCP Student Life</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-left">
             <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
         </div>
         <h1>International State College of The Philippines</h1>
         <div class="header-right">
@@ -41,7 +44,7 @@
                 <ul>
                     <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
                     <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
-                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="student life.html" class="active"><i class="fas fa-smile"></i> Student Life</a></li>
                     <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
                     <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
                     <li><a href="calendar.html"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
@@ -52,37 +55,45 @@
         </aside>
 
         <main class="main-content">
-            <h1>Dashboard</h1>
+            <h1>Student Life</h1>
             
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h2><a href="academics.html">Academics</a></h2>
-                    <p>View your academic progress, courses, and resources.</p>
+            <div class="student-life-intro">
+                <p>At our school, we believe that education extends beyond the classroom. Explore the various opportunities available to enhance your school experience.</p>
+            </div>
+            
+            <div class="life-sections">
+                <div class="life-section">
+                    <h2><i class="fas fa-users"></i> Clubs & Organizations</h2>
+                    <p>Join one of our 30+ student-run clubs or start your own! From robotics to debate, there's something for everyone.</p>
+                    <button class="btn" onclick="viewClubs()">View All Clubs</button>
                 </div>
                 
-                <div class="dashboard-card">
-                    <h2><a href="admissions.html">Admissions</a></h2>
-                    <p>Information about school admissions process.</p>
+                <div class="life-section">
+                    <h2><i class="fas fa-theater-masks"></i> Arts & Culture</h2>
+                    <p>Participate in our vibrant arts community through theater productions, music ensembles, and art exhibitions.</p>
+                    <button class="btn" onclick="viewArts()">Learn More</button>
                 </div>
                 
-                <div class="dashboard-card">
-                    <h2><a href="news.html">Latest News</a></h2>
-                    <p>Stay updated with school announcements.</p>
+                <div class="life-section">
+                    <h2><i class="fas fa-handshake"></i> Student Government</h2>
+                    <p>Get involved in student leadership and help shape school policies and activities.</p>
+                    <button class="btn" onclick="viewGovernment()">Learn More</button>
                 </div>
                 
-                <div class="dashboard-card">
-                    <h2><a href="upcoming-events.html">Upcoming Events</a></h2>
-                    <p>Check out what's happening at school.</p>
+                <div class="life-section">
+                    <h2><i class="fas fa-heart"></i> Wellness Programs</h2>
+                    <p>Resources and programs to support student mental and physical health.</p>
+                    <button class="btn" onclick="viewWellness()">Learn More</button>
                 </div>
-                
-                <div class="dashboard-card">
-                    <h2><a href="school-clubs.html">School Clubs</a></h2>
-                    <p>Explore extracurricular activities.</p>
-                </div>
-                
-                <div class="dashboard-card">
-                    <h2><a href="politics.html">Politics</a></h2>
-                    <p>Student government and school policies.</p>
+            </div>
+            
+            <div class="student-spotlight">
+                <h2>Student Spotlight</h2>
+                <div class="spotlight-card">
+                    <img src="studlife.jpg" alt="Student Spotlight">
+                    <h3>Maria "Ozawa" Gonzalez</h3>
+                    <p>Senior, President of the Activist Club</p>
+                    <p>"Being involved in student life has helped me grow as a leader and make lifelong friends."</p>
                 </div>
             </div>
         </main>
@@ -93,5 +104,22 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function viewClubs() {
+            window.location.href = "school-clubs.html";
+        }
+        
+        function viewArts() {
+            alert("Loading arts and culture information...");
+        }
+        
+        function viewGovernment() {
+            window.location.href = "politics.html";
+        }
+        
+        function viewWellness() {
+            alert("Loading wellness programs information...");
+        }
+    </script>
 </body>
 </html>
