@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISCP School Portal - Dashboard</title>
+    <title>ISCP About Us</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-left">
             <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
         </div>
         <h1>International State College of The Philippines</h1>
         <div class="header-right">
@@ -39,7 +42,7 @@
             
             <nav class="secondary-nav">
                 <ul>
-                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="about us.html" class="active"><i class="fas fa-info-circle"></i> About Us</a></li>
                     <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
                     <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
                     <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
@@ -52,37 +55,51 @@
         </aside>
 
         <main class="main-content">
-            <h1>Dashboard</h1>
+            <h1>About Our School</h1>
             
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h2><a href="academics.html">Academics</a></h2>
-                    <p>View your academic progress, courses, and resources.</p>
+            <div class="about-section">
+                <h2>Our History</h2>
+                <p>Founded in 1847, our school has been providing quality education for over 120 years. What began as a small community school has grown into a premier educational institution serving students from diverse backgrounds across the globe.</p>
+                
+                <h2>Our Mission</h2>
+                <p>To empower students to achieve their full potential through rigorous academics, character development, and extracurricular opportunities in a supportive learning environment.</p>
+                
+                <h2>Our Vision</h2>
+                <p>To be recognized as a leader in innovative education that prepares students for success in college, career, and life.</p>
+                
+                <h2>School Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>145,239</h3>
+                        <p>Students</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>2,855</h3>
+                        <p>Faculty Members</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50:1</h3>
+                        <p>Student-Teacher Ratio</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>93%</h3>
+                        <p>College Acceptance Rate</p>
+                    </div>
                 </div>
                 
-                <div class="dashboard-card">
-                    <h2><a href="admissions.html">Admissions</a></h2>
-                    <p>Information about school admissions process.</p>
-                </div>
-                
-                <div class="dashboard-card">
-                    <h2><a href="news.html">Latest News</a></h2>
-                    <p>Stay updated with school announcements.</p>
-                </div>
-                
-                <div class="dashboard-card">
-                    <h2><a href="upcoming events.html">Upcoming Events</a></h2>
-                    <p>Check out what's happening at school.</p>
-                </div>
-                
-                <div class="dashboard-card">
-                    <h2><a href="school clubs.html">School Clubs</a></h2>
-                    <p>Explore extracurricular activities.</p>
-                </div>
-                
-                <div class="dashboard-card">
-                    <h2><a href="politics.html">Politics</a></h2>
-                    <p>Student government and school policies.</p>
+                <h2>School Leadership</h2>
+                <div class="leadership-grid">
+                    <div class="leader-card">
+                        <img src="sl1.jpg" alt="Principal">
+                        <h3>Atty. Rodrigo R. Nakulong</h3>
+                        <p>Principal</p>
+                    </div>
+                    <br><br>
+                    <div class="leader-card">
+                        <img src="sl2.jpg" alt="Vice Principal">
+                        <h3>Mr. Sininghot S. Habu</h3>
+                        <p>Vice Principal</p>
+                    </div>
                 </div>
             </div>
         </main>

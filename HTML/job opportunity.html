@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISCP Job Opportunities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="school logo.png" alt="School Logo" class="logo">
+        </div>
+        <div class="home-directory">
+            <a href="home.html">Dashboard</a>
+        </div>
+        <h1>International State College of The Philippines</h1>
+        <div class="header-right">
+            <div class="user-profile">
+                <span>Welcome, Student</span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="students portal.html"><i class="fas fa-user-graduate"></i> Student's Portal</a></li>
+                    <li><a href="parents portal.html"><i class="fas fa-users"></i> Parent's Portal</a></li>
+                    <li><a href="counseling services.html"><i class="fas fa-hands-helping"></i> Counseling Services</a></li>
+                    <li><a href="athletics.html"><i class="fas fa-running"></i> Athletics</a></li>
+                    <li><a href="alumni.html"><i class="fas fa-graduation-cap"></i> Alumni</a></li>
+                </ul>
+            </nav>
+            
+            <hr class="separator">
+            
+            <nav class="secondary-nav">
+                <ul>
+                    <li><a href="about us.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="staff directory.html"><i class="fas fa-address-book"></i> Staff Directory</a></li>
+                    <li><a href="student life.html"><i class="fas fa-smile"></i> Student Life</a></li>
+                    <li><a href="transportation.html"><i class="fas fa-bus"></i> Transportation</a></li>
+                    <li><a href="library.html"><i class="fas fa-book"></i> Library Resources</a></li>
+                    <li><a href="calendar.html" class="active"><i class="fas fa-calendar-alt"></i> Calendar</a></li>
+                    <li><a href="payments.html"><i class="fas fa-money-bill-wave"></i> Payment</a></li>
+                    <li><a href="job opportunity.html"><i class="fas fa-briefcase"></i> Job Opportunity</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Job Opportunities</h1>
+            
+            <div class="job-search">
+                <input type="text" id="jobSearch" placeholder="Search for jobs...">
+                <button class="btn" onclick="searchJobs()"><i class="fas fa-search"></i> Search</button>
+            </div>
+            
+            <div class="job-filters">
+                <select id="jobTypeFilter">
+                    <option value="">All Job Types</option>
+                    <option value="teaching">Teaching</option>
+                    <option value="administrative">Administrative</option>
+                    <option value="support">Support Staff</option>
+                    <option value="coaching">Coaching</option>
+                </select>
+                <button class="btn" onclick="filterJobs()">Filter</button>
+            </div>
+            
+            <div class="job-listings">
+                <div class="job-card">
+                    <h2>High School Math Teacher</h2>
+                    <p><i class="fas fa-briefcase"></i> Teaching | <i class="fas fa-map-marker-alt"></i> Main Campus</p>
+                    <p>We're seeking a qualified math teacher to join our team for the upcoming school year.</p>
+                    <button class="btn" onclick="viewJob('math-teacher')">View Details</button>
+                </div>
+                
+                <div class="job-card">
+                    <h2>Administrative Assistant</h2>
+                    <p><i class="fas fa-briefcase"></i> Administrative | <i class="fas fa-map-marker-alt"></i> Main Office</p>
+                    <p>Support our administrative team with day-to-day operations.</p>
+                    <button class="btn" onclick="viewJob('admin-assistant')">View Details</button>
+                </div>
+                
+                <div class="job-card">
+                    <h2>School Counselor</h2>
+                    <p><i class="fas fa-briefcase"></i> Teaching | <i class="fas fa-map-marker-alt"></i> Biringan Campus</p>
+                    <p>Provide academic and personal counseling to our students.</p>
+                    <button class="btn" onclick="viewJob('counselor')">View Details</button>
+                </div>
+                
+                <div class="job-card">
+                    <h2>Soccer Coach</h2>
+                    <p><i class="fas fa-briefcase"></i> Coaching | <i class="fas fa-map-marker-alt"></i> Sports Complex</p>
+                    <p>Lead our boys soccer team to victory this season.</p>
+                    <button class="btn" onclick="viewJob('soccer-coach')">View Details</button>
+                </div>
+            </div>
+            
+            <div class="application-process">
+                <h2>Application Process</h2>
+                <ol>
+                    <li>Search for open positions</li>
+                    <li>Submit your application online</li>
+                    <li>Selected candidates will be contacted for interviews</li>
+                    <li>Background check and reference verification</li>
+                    <li>Job offer and onboarding</li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 International State College of The Philippines. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function searchJobs() {
+            const query = document.getElementById('jobSearch').value;
+            if (query) {
+                alert(`Searching jobs for: ${query}`);
+            } else {
+                alert("Please enter a search term.");
+            }
+        }
+        
+        function filterJobs() {
+            const jobType = document.getElementById('jobTypeFilter').value;
+            if (jobType) {
+                alert(`Filtering jobs by type: ${jobType}`);
+            } else {
+                alert("Showing all job listings.");
+            }
+        }
+        
+        function viewJob(jobId) {
+            alert(`Loading details for job: ${jobId}`);
+        }
+    </script>
+</body>
+</html>
