@@ -51,7 +51,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     
-    if(username === 'admin' && password === 'password') {
+    if(username === 'admin' && password === '12345') {
 
         localStorage.setItem('isLoggedIn', 'true');
 
